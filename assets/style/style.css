@@ -1,5 +1,33 @@
+*{margin: 0;
+}
+header{
+    height: 10vh;
+    max-width: 100%
+}
+main{ min-height: 80vh;
+    max-width: 100%;
+    padding-bottom: 1rem;
+}
+
 .contenedorcito{
     display: flex;
     background-size: cover;
 }
 
+.contenedor-botonera {
+    height: 15vh;
+}
+.row.tarjetas{
+    width: 50vh;
+}
+.card-img-top {
+    width: 90%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+footer{
+    margin-top: 0;
+    background-color: lightgray;
+    color: black;
+}
