@@ -9,6 +9,10 @@ main{ min-height: 80vh;
     padding-bottom: 1rem;
 }
 
+.tarjetita{
+    width: 25%;
+}
+
 .contenedorcito{
     display: flex;
     background-size: cover;
@@ -31,3 +35,16 @@ footer{
     background-color: lightgray;
     color: black;
 }
+
+@media screen and ( max-width:768px){
+    .contenedor-botonera-d-flex{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border-bottom: none;
+        border-top: red 1px solid;
+    }
+
+    
+}
+
