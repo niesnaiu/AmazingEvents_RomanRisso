@@ -34,6 +34,10 @@ footer{
     margin-top: 0;
     background-color: lightgray;
     color: black;
+    max-width: 100%;
+}
+.contenedor-footer-row-align-items-center{
+    max-width: 100%;
 }
 
 @media screen and ( max-width:768px){
