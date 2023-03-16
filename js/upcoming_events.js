@@ -1,33 +1,30 @@
 import data from "./amazing.js";
+import { createCards, createMenuCheckbox, filtroChecks, filtroBuscar} from "./functions.js"
 
-let tarjetasgral = [];
-function catalogo(events, date){
-    for (let evento of events) {
-        if (evento.date > date) {
-        tarjetasgral.push(evento);
-    }
-}
-    return tarjetasgral;
-}
 
-catalogo(data.events, data.currentDate);
 
-const tarjetitas = document.getElementById("tarjetitas")
-const particion = document.createDocumentFragment();
+const dataEvents = data.events;
+const currentDate  = data.currentDate;
+const listaChk = document.getElementById('checkbox-menu');
+const cuadroBusc = document.getElementById('buscador-txb');
+const catsFilros = [... new Set(dataEvents.map(categorie => categorie.category))];
 
-tarjetasgral.forEach((evento) => {
-    const sectortarjeta = document.createElement("div");
-    sectortarjeta.className ="tarjetita mt-3 card shadow-sm col-12 col-sm-6 col-lg-3";
-    sectortarjeta.innerHTML = `<img src="${evento.image}" class="card-img-top object-fit-cover" alt="${evento.category}">
-    <div class="card-body">
-      <h5 class="card-title">${evento.name}</h5>
-      <p class="card-text">${evento.description}</p> 
-    </div>
-    <div class="card-footer d-flex flex-wrap justify-content-between">
-      <p>Price: ${evento.price}</p>
-      <a href="./details/details.html" class="btn btn-primary btn-sm">Details</a>
-    </div>
-  `;
-  particion.appendChild(sectortarjeta)
-})
-tarjetitas.appendChild(particion)
+
+createMenuCheckbox(catsFilros, listaChk);
+createCards(2,dataEvents, currentDate);
+
+listaChk.addEventListener("change", () => {
+  let buscar = cuadroBusc.value.toLowerCase();  
+    let filtrado = filtroBuscar(buscar, dataEvents);
+    let res = filtroChecks(filtrado);
+    createCards(2,res, currentDate);
+  
+});
+ cuadroBusc.addEventListener('keyup', (e) => {
+  let filt = filtroChecks(dataEvents);
+  let buscar = cuadroBusc.value.toLowerCase();
+  let filtrado= filtroBuscar(buscar, filt);  
+  let res = filtroChecks(filtrado);
+  createCards(2,res, currentDate)
+ 
+}); 
