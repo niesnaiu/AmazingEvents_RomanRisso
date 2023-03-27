@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="./index.html">
                     <img src="./assets/images/Logo_Amazing_Events.png" alt="Amazing Events" height="30">
                   </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
               <div class="collapse navbar-collapse d-flex justify-content-end " id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-wrap" href="./upcomingEvents.html">Upcoming Events</a>
@@ -34,7 +34,7 @@
                     <a class="nav-link" href="./contact.html">Contact</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./stats.html">Stats</a>
+                    <a class="nav-link" href="#">Stats</a>
                   </li>
                 </ul>
               </div>
@@ -107,72 +107,35 @@
                         <td colspan="3">Events statistics</td>
                     </tr>
                
-                    <tr>
+                    <tr id="">
                         <td>Events with the hightest percentage of assistence</td>
                         <td>Events with the lowest percentage of assistence</td>
                         <td>Events with the larger capacity</td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    <tr id="eventos-estad">
+                      
                     </tr>
+                   
                     <tr class="bg-info">                    
                         <td colspan="3">Upcoming Events by Category</td>
                     </tr>
-                    <tr>
+                    <tr id="tr-upcoming">
                         <td>Categories</td>
                         <td>Revenues</td>
-                        <td>Percentage of tolerance</td>
+                        <td>Percentage of attendance</td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    
+
+                  
                     <tr class="bg-info">                    
                         <td colspan="3">Past Events statistics by category</td>
                     </tr>
-                    <tr>
+                    <tr id="tr-pastevents">
                         <td>Categories</td>
                         <td>Revenues</td>
-                        <td>Percentage of tolerance</td>
+                        <td>Percentage of attendance</td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                   
                     </tbody>
                 </table>
             </div>
@@ -197,7 +160,7 @@
         </div>
         <div class="col-6 d-flex justify-content-end align-items-center pe-4"><h2 class="me-4">Cohort</h2></div>
       </div>
-      
+      <script type="module" src="./js/stats.js"></script>
     </footer>
   </body>
   
